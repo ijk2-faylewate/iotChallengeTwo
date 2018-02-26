@@ -47,7 +47,7 @@ void charToSend(){
   if (sendThis != NOISE){
       //display for test: INPUT
       uBit.display.print(sendThis);
-      uBit.sleep(500);
+      uBit.sleep(100);
       uBit.display.clear();
   /*    //display for test: POSITION IN MESSAGE
       uBit.display.print(inTrack);
@@ -61,7 +61,7 @@ void charToSend(){
       uBit.display.clear();
     */  //If at end of message,
       //display for test: OUTPUT
-      if(inTrack == SEND_ON){
+    /*  if(inTrack == SEND_ON){
         uBit.display.scroll("OUTP");
         uBit.sleep(500);
         uBit.display.clear();
@@ -70,8 +70,9 @@ void charToSend(){
           uBit.display.scroll(toSend[i]);
           uBit.sleep(500);
           uBit.display.clear();
-        }
+        }*/
 
+        //test: dec function
         morseDec();
         //reset to noise.
         for (int y = 0; y < MESSAGE; y++){
@@ -84,5 +85,5 @@ void charToSend(){
         sendThis = NOISE;
       //  checkArray();
       }
-    }
+    
 }

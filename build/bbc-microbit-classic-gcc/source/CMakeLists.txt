@@ -6,6 +6,7 @@ include_directories("/home/student/iotChallengeTwo/source")
 
 
 set(YOTTA_AUTO_IOT-EXAMPLE_CPP_FILES
+    "/home/student/iotChallengeTwo/source/transmission.cpp"
     "/home/student/iotChallengeTwo/source/morse.cpp"
     "/home/student/iotChallengeTwo/source/genInOut.cpp"
     "/home/student/iotChallengeTwo/source/main.cpp"
