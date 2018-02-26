@@ -15,17 +15,17 @@ extern MicroBit uBit;
 #define SEND_ON 3
 #define MESSAGE 4
 
-//extern int [];
+extern int toSend [MESSAGE];
 
 //Test
 void charToSend();
+void morseDec();
 
 //Non-test
 void buttonAClick(MicroBitEvent);
 void buttonAHold(MicroBitEvent);
 void buttonBClick(MicroBitEvent);
 
-//probably just test
-int getValue();
+
 
 #endif

@@ -1,22 +1,11 @@
 #include "sendReceive.h"
 
-//Dash, dot, dead air
-//#define HI 1
-//#define LOW 0
-//#define NOISE -1
-//Boolean values
-//#define TRUE 1
-//#define FALSE 0
-//values for arrays and asscociated loops
-//#define SEND_ON 3
-//#define MESSAGE 4
-
 //MicroBitPin P0(MICROBIT_ID_IO_P0, MICROBIT_PIN_P0, PIN_CAPABILITY_DIGITAL);
 int sendNow = FALSE;
 //Value for character
 int sendThis = NOISE;
 //Track number of dot or dash input
-int inTrack = -1;
+int inTrack = NOISE;
 //Array to hold char selection
 int toSend [MESSAGE] = {NOISE,NOISE,NOISE,NOISE};
 
@@ -82,6 +71,8 @@ void charToSend(){
           uBit.sleep(500);
           uBit.display.clear();
         }
+
+        morseDec();
         //reset to noise.
         for (int y = 0; y < MESSAGE; y++){
           //uBit.display.print(y);
@@ -93,25 +84,5 @@ void charToSend(){
         sendThis = NOISE;
       //  checkArray();
       }
-}
-
-  /*
-
-  if (sendNow == TRUE){
-    if (toSend[0] == 0){
-      uBit.display.print('a');
-      uBit.sleep(500);
-      uBit.display.clear();
     }
-    else if (toSend[0] == 1){
-      uBit.display.print('b');
-      uBit.sleep(500);
-      uBit.display.clear();
-    }
-    else{
-      uBit.display.scroll('Fuck up');
-      uBit.sleep(500);
-      uBit.display.clear();
-    }
-    */
 }
